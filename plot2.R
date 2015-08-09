@@ -10,7 +10,7 @@ dateTime <- paste(data$Date, data$Time)
 data1 <- transform(data, fullDate = strptime(dateTime, format =  "%d/%m/%Y %H:%M:%S"))
 
 
-## Create Plot 1 & Save As .png
+## Create Plot 2 & Save As .png
 with(data1,  plot(Global_active_power ~ fullDate, data1, type="l", ylab = "Global Active Power (kilowatts)", xlab = "") )
 dev.copy(png, file = "plot2.png", width = 480, height = 480)
 dev.off()
